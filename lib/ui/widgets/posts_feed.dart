@@ -13,7 +13,7 @@ class PostsFeed extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: StreamBuilder(
-        stream: bloc.allPosts,
+        stream: feedbloc.allPosts,
         builder: (context, AsyncSnapshot<PostsFeedModel> snapshot) {
           if (snapshot.hasData) {
             return Container(

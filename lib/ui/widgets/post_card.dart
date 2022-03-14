@@ -102,7 +102,7 @@ class PostCard extends StatelessWidget {
                           );
 
                           if (ret == true) {
-                            bloc.deletePost(postIndex);
+                            feedbloc.deletePost(postIndex);
                           }
                         },
                         icon: const Icon(

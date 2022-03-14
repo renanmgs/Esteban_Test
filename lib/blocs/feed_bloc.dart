@@ -28,4 +28,4 @@ class FeedBloc {
   }
 }
 
-final bloc = FeedBloc();
+final feedbloc = FeedBloc();

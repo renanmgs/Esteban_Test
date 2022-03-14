@@ -24,8 +24,9 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void startRoutine() async {
+    //Initializing
     await userBloc.logIn();
-    await bloc.fetchAllPosts();
+    await feedbloc.fetchAllPosts();
   }
 
   @override
@@ -50,6 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 );
 
                 if (ret != null) {
+                  //Creating a post, can late be done inside the Bloc only passing the content
                   PostModel newpost = PostModel(
                     userSnap.data!.userId,
                     userSnap.data!.userName,
@@ -60,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     0,
                     0,
                   );
-                  bloc.addPost(newpost);
+                  feedbloc.addPost(newpost);
                   scrollController.animateTo(0, duration: Duration(milliseconds: 200), curve: Curves.easeInOut);
                 }
               },
