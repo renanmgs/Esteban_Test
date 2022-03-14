@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
-import 'package:upworkestebantest/blocs/feed_bloc.dart';
 
 class DeletePostModal extends StatefulWidget {
   // You can also pass the translation in here if you want to

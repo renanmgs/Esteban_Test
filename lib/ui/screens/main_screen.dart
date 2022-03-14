@@ -5,7 +5,6 @@ import 'package:upworkestebantest/blocs/user_info_bloc.dart';
 import 'package:upworkestebantest/models/post_model.dart';
 import 'package:upworkestebantest/models/user_model.dart';
 import 'package:upworkestebantest/ui/screens/new_post_screen.dart';
-import '../widgets/modal_add_post.dart';
 import '../widgets/posts_feed.dart';
 import '../widgets/main_menu_profile_appbar.dart';
 

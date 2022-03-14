@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:sizer/sizer.dart';
 import 'package:upworkestebantest/ui/screens/main_screen.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import 'resources/font_theme.dart';
 

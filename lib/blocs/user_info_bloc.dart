@@ -1,6 +1,5 @@
 import 'package:rxdart/rxdart.dart';
 import 'package:upworkestebantest/models/user_model.dart';
-import '../models/post_model.dart';
 import '../resources/repository.dart';
 
 class UserBloc {

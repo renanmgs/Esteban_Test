@@ -4,8 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:octo_image/octo_image.dart';
 import 'package:sizer/sizer.dart';
 import 'package:upworkestebantest/blocs/user_info_bloc.dart';
-import '../widgets/posts_feed.dart';
-import '../widgets/main_menu_profile_appbar.dart';
 import '../widgets/ProfileListTile.dart';
 
 class NewPostScreen extends StatefulWidget {

@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:octo_image/octo_image.dart';
 import 'package:sizer/sizer.dart';
 import 'package:upworkestebantest/blocs/user_info_bloc.dart';
-import 'package:upworkestebantest/models/user_model.dart';
 
 import '../../esteban_test_icons.dart';
 
