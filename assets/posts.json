@@ -1,6 +1,7 @@
 {
   "posts": [
     {
+      "userId":"34g134f14tr14t25",
       "userName": "Jane Doe",
       "timestamp": "4 hours ago",
       "profileImageUrl": "https://i.imgur.com/6U53rf7.png",
@@ -10,6 +11,7 @@
       "shares": 34
     },
     {
+      "userId":"f14143ta45q4354qf",
       "userName": "David Smith",
       "timestamp": "5 hours ago",
       "profileImageUrl": "https://i.imgur.com/pp4XyTp.png",
@@ -19,6 +21,7 @@
       "shares": 34
     },
     {
+      "userId":"35te4ryw457q432aw345",
       "userName": "John Doe",
       "timestamp": "5 hours ago",
       "profileImageUrl": "https://i.imgur.com/6A2s7Uw.png",

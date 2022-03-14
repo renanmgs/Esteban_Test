@@ -1,9 +1,8 @@
-import 'package:equatable/equatable.dart';
 import 'package:rxdart/rxdart.dart';
 import '../models/post_model.dart';
 import '../resources/repository.dart';
 
-abstract class FeedBloc extends Equatable {
+class FeedBloc {
   final _repository = Repository();
   final _postsFetcher = PublishSubject<PostsFeedModel>();
 
@@ -19,7 +18,7 @@ abstract class FeedBloc extends Equatable {
     _postsFetcher.sink.add(itemModel);
   }
 
-  fetchAllPosts() async {
+  Future<void> fetchAllPosts() async {
     PostsFeedModel itemModel = await _repository.fetchAllPosts();
     _postsFetcher.sink.add(itemModel);
   }
@@ -29,9 +28,4 @@ abstract class FeedBloc extends Equatable {
   }
 }
 
-class FeedBlocState extends FeedBloc {
-  @override
-  List<Object> get props => [];
-}
-
-final bloc = FeedBlocState();
+final bloc = FeedBloc();

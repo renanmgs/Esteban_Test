@@ -1,11 +1,14 @@
 import 'dart:async';
+import 'package:upworkestebantest/models/user_model.dart';
+
 import '../models/post_model.dart';
-import 'get_posts_from_api.dart';
+import 'my_api.dart';
 
 class Repository {
-  final postsApiProvider = GetPostsFromAPI();
+  final apiProvider = MyAPI();
 
-  Future<PostsFeedModel> fetchAllPosts() => postsApiProvider.fetchPostsList();
-  Future<PostsFeedModel> addPost(post) => postsApiProvider.addPost(post);
-  Future<PostsFeedModel> deletePost(index) => postsApiProvider.deletePost(index);
+  Future<UserModel> logIn(id) => apiProvider.logIn(id);
+  Future<PostsFeedModel> fetchAllPosts() => apiProvider.fetchPostsList();
+  Future<PostsFeedModel> addPost(post) => apiProvider.addPost(post);
+  Future<PostsFeedModel> deletePost(index) => apiProvider.deletePost(index);
 }

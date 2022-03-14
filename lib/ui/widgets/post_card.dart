@@ -3,12 +3,14 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 import 'package:octo_image/octo_image.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:upworkestebantest/ui/widgets/modal_add_post.dart';
 
-import '../blocs/feed_bloc.dart';
+import '../../blocs/feed_bloc.dart';
 
 class PostCard extends StatelessWidget {
   const PostCard(
       {Key? key,
+      required this.userId,
       required this.userName,
       required this.timestamp,
       required this.profileImageUrl,
@@ -19,6 +21,7 @@ class PostCard extends StatelessWidget {
       required this.postIndex})
       : super(key: key);
 
+  final userId;
   final userName;
   final timestamp;
   final profileImageUrl;
@@ -85,8 +88,22 @@ class PostCard extends StatelessWidget {
                       width: 30.0,
                       child: IconButton(
                         padding: const EdgeInsets.all(0.0),
-                        onPressed: () {
-                          bloc.deletePost(postIndex);
+                        onPressed: () async {
+                          var ret = await showGeneralDialog(
+                            context: context,
+                            barrierColor: Colors.black12.withOpacity(0.6), // Background color
+                            barrierDismissible: false,
+                            barrierLabel: 'Dialog',
+                            transitionDuration: Duration(milliseconds: 200), // How long it takes to popup dialog after button click
+                            pageBuilder: (_, __, ___) {
+                              // Makes widget fullscreen
+                              return const DeletePostModal();
+                            },
+                          );
+
+                          if (ret == true) {
+                            bloc.deletePost(postIndex);
+                          }
                         },
                         icon: const Icon(
                           Icons.delete_rounded,

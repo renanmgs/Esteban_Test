@@ -1,10 +1,23 @@
 import 'dart:async';
 import 'package:flutter/services.dart';
+import 'package:upworkestebantest/models/user_model.dart';
 import 'dart:convert';
 import '../models/post_model.dart';
 
-class GetPostsFromAPI {
+class MyAPI {
   late PostsFeedModel _loadedFeed;
+
+  Future<UserModel> logIn(String userId) async {
+    //Just simulatin passim some param and getting the user
+    print("loggin user");
+
+    final String response = await rootBundle.loadString('assets/users.json');
+    final data = await json.decode(response);
+    UserModel user = UserModel.fromJson(data[userId]);
+
+    await Future.delayed(Duration(seconds: 1));
+    return user;
+  }
 
   Future<PostsFeedModel> fetchPostsList() async {
     print("getting posts");
